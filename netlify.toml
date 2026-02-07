@@ -1,0 +1,15 @@
+[build]
+command = "npm run build"
+
+[build.environment]
+NEXT_TELEMETRY_DISABLED = "1"
+NETLIFY_ANALYTICS = "false"
+
+[[plugins]]
+package = "@netlify/plugin-nextjs"
+
+[[redirects]]
+from = "/*"
+to = "/"
+status = 200
+force = false
