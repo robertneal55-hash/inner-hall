@@ -11,16 +11,11 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   },
   global: {
     fetch: (url, options = {}) => {
-      const timeout = 1000;
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => {
-        console.warn('[Supabase] Request timeout after 1s, aborting:', url);
-        controller.abort();
-      }, timeout);
+      
 
       return fetch(url, {
         ...options,
-        signal: controller.signal,
+       
       }).finally(() => clearTimeout(timeoutId))
         .catch((error) => {
           if (error.name === 'AbortError') {
