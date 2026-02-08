@@ -23,10 +23,8 @@ export default function Home() {
     setCurrentView('hub');
   };
 
-  const handleReturnFromOcean = (completed: boolean = false) => {
-    if (completed) {
+  const handleReturnFromOcean = () => {
       setHasVisitedRoom(true);
-    }
     setCurrentView('hub');
   };
 
