@@ -16,10 +16,8 @@ export default function Home() {
   const [currentView, setCurrentView] = useState<View>('landing');
   const [hasVisitedRoom, setHasVisitedRoom] = useState(false);
 
-  const handleReturnFromJournal = (completed: boolean = false) => {
-    if (completed) {
-      setHasVisitedRoom(true);
-    }
+  const handleReturnFromJournal = () => {
+    setHasVisitedRoom(true);
     setCurrentView('hub');
   };
 
