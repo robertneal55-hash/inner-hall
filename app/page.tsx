@@ -33,14 +33,25 @@ export default function Home() {
         {currentView === 'landing' && (
           <LandingPage onEnter={() => setCurrentView('hub')} />
         )}
+           {currentView === 'hub' && (
+  <InnerHub
+    onSelectJournal={() => {
+      console.log('GO JOURNAL');
+      setCurrentView('journal');
+    }}
+    onSelectSound={() => {
+      console.log('GO SOUND');
+      setCurrentView('sound');
+    }}
+    onSelectOcean={() => {
+      console.log('GO OCEAN');
+      setCurrentView('ocean');
+    }}
+    onSignOut={() => setCurrentView('landing')}
+    showListeningChamber={true}
+  />
+)}
 
-        {currentView === 'hub' && (
-          <InnerHub
-            onSelectJournal={() => setCurrentView('journal')}
-            onSelectSound={() => setCurrentView('sound')}
-            onSelectOcean={() => setCurrentView('ocean')}
-            onSignOut={() => setCurrentView('landing')}
-            showListeningChamber={hasVisitedRoom}
           />
         )}
 
