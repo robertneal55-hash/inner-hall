@@ -1,10 +1,10 @@
 'use client';
 
-import LandingPage from '../components/LandingPage';
-import InnerHub from '../components/InnerHub';
-import JournalSpace from '../components/JournalSpace';
+import LandingPage from '../components/landing-page';
+import InnerHub from '../components/inner-hub';
+import JournalSpace from '../components/journal-space';
 import ListeningChamber from '../components/ListeningChamber';
-import OceanRoom from '../components/OceanRoom';
+import OceanRoom from '../components/ocean-room';
 
 
 
