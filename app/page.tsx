@@ -33,7 +33,7 @@ export default function Home() {
         {currentView === 'landing' && (
           <LandingPage onEnter={() => setCurrentView('hub')} />
         )}
-           {currentView === 'hub' && (
+  {currentView === 'hub' && (
   <InnerHub
     onSelectJournal={() => {
       console.log('GO JOURNAL');
@@ -49,12 +49,7 @@ export default function Home() {
     }}
     onSignOut={() => setCurrentView('landing')}
     showListeningChamber={true}
-  />
 )}
-
-          />
-        )}
-
         {currentView === 'journal' && (
           <JournalSpace onBack={handleReturnFromJournal} />
         )}
