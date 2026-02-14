@@ -1,12 +1,11 @@
 'use client';
 
-import { useState } from 'react';
-import LandingPage from '@/components/LandingPage';
-import InnerHub from '@/components/InnerHub';
-// If these are different in your project, change the paths/names:
-import JournalSpace from '@/components/JournalSpace';
-import ListeningChamber from '@/components/ListeningChamber';
-import OceanRoom from '@/components/OceanRoom';
+import LandingPage from "../components/LandingPage";
+import InnerHub from "../components/InnerHub";
+import JournalSpace from "../components/JournalSpace";
+import ListeningChamber from "../components/ListeningChamber";
+import OceanRoom from "../components/OceanRoom";
+
 
 type View = 'landing' | 'hub' | 'journal' | 'sound' | 'ocean';
 
