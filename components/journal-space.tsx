@@ -1,4 +1,4 @@
-'use client';
+ault'use client';
 
 import { useState, useRef, useEffect } from 'react';
 import { supabase } from '@/lib/supabase';
@@ -9,7 +9,7 @@ interface JournalSpaceProps {
   onBack?: (completed?: boolean) => void;
 }
 
-export function JournalSpace({ onBack }: JournalSpaceProps) {
+export default function JournalSpace({ onBack }: JournalSpaceProps) {
   const [step, setStep] = useState<'overview' | 'lectern'>('overview');
   const [mode, setMode] = useState<'initial' | 'writing'>('initial');
   const [content, setContent] = useState('');
