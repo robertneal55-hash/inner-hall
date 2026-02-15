@@ -1,5 +1,3 @@
-'use client'
-
 import './globals.css'
 import type { Metadata } from 'next'
 import { AuthProvider } from '@/components/auth-context'
@@ -17,9 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <AuthProvider>
-          {children}
-        </AuthProvider>
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   )
