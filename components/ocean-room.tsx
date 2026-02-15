@@ -122,14 +122,14 @@ export default function OceanRoom({ onBack }: OceanRoomProps) {
       });
       clearTimeout(fallbackTimer);
       setIsSaving(false);
-      onExit(false);
+      onBack();
     }
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100 pointer-events-none">
       <button
-        onClick={() => onExit(false)}
+        onClick={() => onBack()}
         style={{
           position: 'fixed',
           top: '16px',
