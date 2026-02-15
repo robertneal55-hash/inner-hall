@@ -1,6 +1,6 @@
 'use client';
 
-export default function ListeningChamber({ onExit }: { onExit?: () => void }) {
+export default function ListeningChamber({ onback }: { onExit?: () => void }) {
   return (
     <div style={{ padding: 24 }}>
       <h1>Listening Chamber</h1>
