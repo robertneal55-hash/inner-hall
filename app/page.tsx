@@ -25,12 +25,10 @@ const [hasVisitedRoom, setHasVisitedRoom] = useState(false);
     onSelectJournal={() => setCurrentView('journal')}
 
     onSelectOcean={() => {
-      setHasVisitedRoom(true);
       setCurrentView('ocean');
     }}
 
     onSelectGrand={() => {
-      setHasVisitedRoom(true);
       setCurrentView('grand');
     }}
 
@@ -54,15 +52,19 @@ const [hasVisitedRoom, setHasVisitedRoom] = useState(false);
       )}
 
 {currentView === 'ocean' && (
-  <OceanRoom onBack={() => setCurrentView('hub')} />
+  <OceanRoom onBack={() => { 
+   setHasVisitedRoom(true); 
+    setCurrentView('hub');
 )}
-
+/>
+)}
 {currentView === 'grand' && (
-  <GrandCanyonRoom onBack={() => setCurrentView('hub')} />
+  <GrandCanyonRoom onBack={() => {
+    setHasVisitedRoom(true);
+    setCurrentView('hub');
 )}
-
-
-      )}
+/>
+)}
     </main>
   );
 }
