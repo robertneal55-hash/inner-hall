@@ -41,7 +41,7 @@ interface SoundSpaceProps {
   onBack?: () => void;
 }
 
-export function SoundSpace({ onBack }: SoundSpaceProps) {
+export default function SoundSpace({ onBack }: SoundSpaceProps) {
   const [soundEnabled, setSoundEnabled] = useState(false);
   const [isNarrating, setIsNarrating] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<'cleansing' | 'bathing' | null>(null);
