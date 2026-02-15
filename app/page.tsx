@@ -17,18 +17,23 @@ const [hasVisitedRoom, setHasVisitedRoom] = useState(false);
   return (
     <main>
       {currentView === 'landing' && (
-        <LandingPage onEnter={() => setCurrentView('hub')} />
+        <LandingPage onEnter={() => {
+          setHasVisitedRoom(false);
+          setCurrentView('hub');
+        }}
+          />
       )}
-
-{currentView === 'hub' && (
+     {currentView === 'hub' && (
   <InnerHub
     onSelectJournal={() => setCurrentView('journal')}
 
     onSelectOcean={() => {
+      setHasVisitedRoom(true);
       setCurrentView('ocean');
     }}
 
     onSelectGrand={() => {
+      setHasVisitedRoom(true);
       setCurrentView('grand');
     }}
 
@@ -40,6 +45,10 @@ const [hasVisitedRoom, setHasVisitedRoom] = useState(false);
     }}
 
     showListeningChamber={hasVisitedRoom}
+  />
+)}
+ 
+
   />
           }}
           onSelectSound={() => setCurrentView('sound')}
