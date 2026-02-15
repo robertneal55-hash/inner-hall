@@ -65,7 +65,7 @@ export default function OceanRoom({ onBack }: OceanRoomProps) {
 
   const handleSaveAndExit = async () => {
     if (!selectedPrompt) {
-      onExit(false);
+      onBack();
       return;
     }
 
@@ -74,7 +74,7 @@ export default function OceanRoom({ onBack }: OceanRoomProps) {
     const fallbackTimer = setTimeout(() => {
       console.log('Fallback navigation triggered (non-blocking)');
       setIsSaving(false);
-      onExit(false);
+      onBack();
     }, 2000);
 
     try {
