@@ -38,7 +38,7 @@ export default function Page() {
       )}
 
       {currentView === 'ocean' && (
-        <OceanRoom oBack={() => setCurrentView('hub')} />
+        <OceanRoom onBack={() => setCurrentView('hub')} />
       )}
     </main>
   );
