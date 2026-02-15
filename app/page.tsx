@@ -20,23 +20,32 @@ const [hasVisitedRoom, setHasVisitedRoom] = useState(false);
         <LandingPage onEnter={() => setCurrentView('hub')} />
       )}
 
-      {currentView === 'hub' && (
-        <InnerHub
-          onSelectJournal={() => 
-            setCurrentview('journal');
+{currentView === 'hub' && (
+  <InnerHub
+    onSelectJournal={() => setCurrentView('journal')}
+
+    onSelectOcean={() => {
+      setHasVisitedRoom(true);
+      setCurrentView('ocean');
+    }}
+
+    onSelectGrand={() => {
+      setHasVisitedRoom(true);
+      setCurrentView('grand');
+    }}
+
+    onSelectSound={() => setCurrentView('sound')}
+
+    onSignOut={() => {
+      setHasVisitedRoom(false);
+      setCurrentView('landing');
+    }}
+
+    showListeningChamber={hasVisitedRoom}
+  />
           }}
           onSelectSound={() => setCurrentView('sound')}
-          onSelectOcean={() => {
-  setHasVisitedRoom(true);
-  setCurrentView('ocean');
-}}
-
-          onSignOut={() => setCurrentView('landing')}
-          showListeningChamber={hasVisitedRoom}
-        />
-      )}
-
-      {currentView === 'journal' && (
+ {currentView === 'journal' && (
         <JournalSpace onBack={() => setCurrentView('hub')} />
       )}
 
