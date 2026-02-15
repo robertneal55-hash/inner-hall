@@ -34,11 +34,11 @@ export default function Page() {
       )}
 
       {currentView === 'sound' && (
-        <ListeningChamber onback={() => setCurrentView('hub')} />
+        <ListeningChamber onBack={() => setCurrentView('hub')} />
       )}
 
       {currentView === 'ocean' && (
-        <OceanRoom onback={() => setCurrentView('hub')} />
+        <OceanRoom oBack={() => setCurrentView('hub')} />
       )}
     </main>
   );
