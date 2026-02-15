@@ -22,7 +22,9 @@ const [hasVisitedRoom, setHasVisitedRoom] = useState(false);
 
       {currentView === 'hub' && (
         <InnerHub
-          onSelectJournal={() => setCurrentView('journal')}
+          onSelectJournal={() => 
+            setCurrentview('journal');
+          }}
           onSelectSound={() => setCurrentView('sound')}
           onSelectOcean={() => {
   setHasVisitedRoom(true);
