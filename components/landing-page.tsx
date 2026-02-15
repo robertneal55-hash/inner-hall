@@ -12,7 +12,7 @@ interface LandingPageProps {
   onEnter?: () => void;
 }
 
-export function LandingPage({ onEnter }: LandingPageProps) {
+export default function LandingPage({ onEnter }: LandingPageProps) {
   const [showAuthForm, setShowAuthForm] = useState(false);
   const [isSignUp, setIsSignUp] = useState(false);
   const [email, setEmail] = useState('');
