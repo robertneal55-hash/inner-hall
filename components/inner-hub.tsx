@@ -1,4 +1,4 @@
-'use client';
+lt'use client';
 
 import { useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -14,7 +14,7 @@ interface InnerHubProps {
   showListeningChamber?: boolean;
 }
 
-export function InnerHub({ onSelectJournal, onSelectSound, onSelectOcean, onSignOut, showListeningChamber = false }: InnerHubProps) {
+export default function InnerHub({ onSelectJournal, onSelectSound, onSelectOcean, onSignOut, showListeningChamber = false }: InnerHubProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const fadeIntervalRef = useRef<NodeJS.Timeout | null>(null);
   const [isTransitioning, setIsTransitioning] = useState(false);
