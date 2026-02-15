@@ -21,7 +21,7 @@ const WRITING_PROMPTS = [
   "What do I need to forgive myself for?"
 ];
 
-export function OceanRoom({ onExit }: OceanRoomProps) {
+export default function OceanRoom({ onExit }: OceanRoomProps) {
   const [selectedPrompt, setSelectedPrompt] = useState<string | null>(null);
   const [writtenText, setWrittenText] = useState('');
   const [isSaving, setIsSaving] = useState(false);
