@@ -8,7 +8,7 @@ import JournalSpace from '../components/journal-space';
 import ListeningChamber from '../components/ListeningChamber';
 import OceanRoom from '../components/ocean-room';
 
-type View = 'landing' | 'hub' | 'journal' | 'sound' | 'ocean';
+type View = 'landing' | 'hub' | 'journal' | 'sound' | 'ocean'| 'grand'
 
 export default function Page() {
   const [currentView, setCurrentView] = useState<View>('landing');
@@ -44,8 +44,15 @@ const [hasVisitedRoom, setHasVisitedRoom] = useState(false);
         <ListeningChamber onBack={() => setCurrentView('hub')} />
       )}
 
-      {currentView === 'ocean' && (
-        <OceanRoom onBack={() => setCurrentView('hub')} />
+{currentView === 'ocean' && (
+  <OceanRoom onBack={() => setCurrentView('hub')} />
+)}
+
+{currentView === 'grand' && (
+  <GrandCanyonRoom onBack={() => setCurrentView('hub')} />
+)}
+
+
       )}
     </main>
   );
