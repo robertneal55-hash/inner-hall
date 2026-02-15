@@ -1,6 +1,12 @@
-'use client';
+"use client";
 
-export default function ListeningChamber({ onback }: { onExit?: () => void }) {
+interface JournalSpaceProps {
+  onBack: () => void;
+}
+
+export default function JournalSpace({ onBack }: JournalSpaceProps) {
+}
+
   return (
     <div style={{ padding: 24 }}>
       <h1>Listening Chamber</h1>
