@@ -31,15 +31,15 @@ export default function Page() {
       )}
 
       {currentView === 'journal' && (
-        <JournalSpace onExit={() => setCurrentView('hub')} />
+        <JournalSpace onBack={() => setCurrentView('hub')} />
       )}
 
       {currentView === 'sound' && (
-        <ListeningChamber onExit={() => setCurrentView('hub')} />
+        <ListeningChamber onBack={() => setCurrentView('hub')} />
       )}
 
       {currentView === 'ocean' && (
-        <OceanRoom onExit={() => setCurrentView('hub')} />
+        <OceanRoom onBack={() => setCurrentView('hub')} />
       )}
     </main>
   );
