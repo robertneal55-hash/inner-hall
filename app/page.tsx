@@ -1,5 +1,6 @@
 'use client';
 
+import {useState} from 'react';
 import LandingPage from '../components/landing-page';
 import InnerHub from '../components/inner-hub';
 import JournalSpace from '../components/journal-space';
