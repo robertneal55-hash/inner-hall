@@ -9,6 +9,7 @@ import OceanRoom from '../components/ocean-room';
 
 
 
+
 type View = 'landing' | 'hub' | 'journal' | 'sound' | 'ocean';
 
 export default function Page() {
@@ -32,10 +33,6 @@ export default function Page() {
 
       {currentView === 'journal' && (
     <JournalSpace onBack={(completed) => setCurrentView('hub')} />
-import InnerHub from '../components/InnerHub';
-import JournalSpace from '../components/JournalSpace';
-import ListeningChamber from '../components/ListeningChamber';
-import OceanRoom from '../components/OceanRoom';
 
       )}
 
