@@ -7,7 +7,7 @@ import { useToast } from '@/hooks/use-toast';
 import { ArrowLeft } from 'lucide-react';
 
 interface OceanRoomProps {
-  onExit: (completed?: boolean) => void;
+  onBack: () => void;
 }
 
 const WRITING_PROMPTS = [
@@ -21,7 +21,7 @@ const WRITING_PROMPTS = [
   "What do I need to forgive myself for?"
 ];
 
-export default function OceanRoom({ onExit }: OceanRoomProps) {
+export default function OceanRoom({ onBack }: OceanRoomProps) {
   const [selectedPrompt, setSelectedPrompt] = useState<string | null>(null);
   const [writtenText, setWrittenText] = useState('');
   const [isSaving, setIsSaving] = useState(false);
