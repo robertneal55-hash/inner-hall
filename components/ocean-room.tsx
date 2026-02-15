@@ -89,7 +89,7 @@ export default function OceanRoom({ onBack }: OceanRoomProps) {
         });
         clearTimeout(fallbackTimer);
         setIsSaving(false);
-        onExit(false);
+        onBack();
         return;
       }
 
@@ -112,7 +112,7 @@ export default function OceanRoom({ onBack }: OceanRoomProps) {
       });
       clearTimeout(fallbackTimer);
       setIsSaving(false);
-      onExit(true);
+      onBack();
     } catch (error) {
       console.error('Save error (non-blocking):', error);
       toast({
