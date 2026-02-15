@@ -31,7 +31,12 @@ export default function Page() {
       )}
 
       {currentView === 'journal' && (
-        <JournalSpace onBack={() => setCurrentView('hub')} />
+    <JournalSpace onBack={(completed) => setCurrentView('hub')} />
+import InnerHub from '../components/InnerHub';
+import JournalSpace from '../components/JournalSpace';
+import ListeningChamber from '../components/ListeningChamber';
+import OceanRoom from '../components/OceanRoom';
+
       )}
 
       {currentView === 'sound' && (
